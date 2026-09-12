@@ -1,6 +1,7 @@
-# XXX家园 · Minecraft 建筑作品集
+# 147家园 · Minecraft 建筑作品集
 
 > 这是我学习前端过程中的练习项目，用于展示个人 Minecraft 建筑作品。
+
 
 一个展示 Minecraft 建筑作品的个人画廊，使用 Blender 渲染图呈现。
 
