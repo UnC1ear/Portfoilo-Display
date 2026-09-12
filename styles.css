@@ -1,4 +1,4 @@
-/* 全局设置 */
+/* ===全局设置=== */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,6 @@
 :root {
     --bg: #f2efef;
     --bg-elevated: #ffffff;
-    --hover-bg: #f0f0f0;
     --text: #1a1a1a;
     --text-muted: #666;
     --border: rgba(0, 0, 0, 0.08);
@@ -26,11 +25,6 @@ li {
     list-style: none;
 }
 
-hr {
-    border: 0;
-    height: 0.1rem;
-    background: linear-gradient(to right, transparent, #333, transparent);
-}
 a {
     text-decoration: none;
     color: inherit;
@@ -38,12 +32,12 @@ a {
 
 h2 {
     font-size: 2rem;
-    display: block;
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
-/* 导航栏样式 */
+/* ===导航栏样式=== */
 nav {
     z-index: 10;
     position: fixed;
@@ -71,6 +65,7 @@ nav {
 .nav-links li a {
     display: block;
     padding: 0.5rem 0.8rem;
+    font-weight: bold;
 }
 
 .nav-links li a:hover {
@@ -78,7 +73,7 @@ nav {
     border-radius: 4px;
 }
 
-/* Hero Section */
+/* ===Hero=== */
 .hero {
     height: 100vh;
     position: relative;
@@ -117,13 +112,12 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 3rem 2rem;
 }
 
 
 .hero h1 {
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(2rem, 6vw, 12rem);
     margin-bottom: 2rem;
 }
 
@@ -131,6 +125,7 @@ nav {
     display: inline-block;
     color: #ffffff;
     font-size: 1.25rem;
+    font-size: bold;
     background-color: rgba(255,255,255,0.15);
     padding: 0.75rem 1.25rem;
     text-align: center;
@@ -143,10 +138,14 @@ nav {
     background-color: rgba(255,255,255,0.1);
 }
 
-/* 精选卡片 */
+/* ===精选卡片=== */
+.selected-portfolio {
+    padding: 1rem 3rem;
+}
+
 .selected-works {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
     gap: 1.5rem;
 }
 
@@ -182,12 +181,40 @@ nav {
 }
 
 .work-card:hover img {
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
-/* 关于 */
+/* ===关于=== */
 
-/* 页脚 */
-footer {
+.about {
     text-align: center;
+    padding: 1.5rem;
+    margin:1.5rem 0;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===页脚=== */
+
+footer {
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 1.5rem;
+    background-color: var(--bg-elevated);
+    text-align: center;
+}
+
+footer a:hover {
+    color: var(--text);
+}
+
+/* ===响应式=== */
+
+@media (max-width: 600px) {
+    .sel-portfolio {
+        padding: 1rem;
+    }
 }
