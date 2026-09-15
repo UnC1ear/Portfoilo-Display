@@ -150,13 +150,10 @@ nav {
 }
 
 .work-card {
+    cursor: pointer;
     background: var(--bg-elevated);
     border-radius: 8px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.work-link {
-    display: block;
 }
 
 .work-thumb {

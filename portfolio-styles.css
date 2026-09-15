@@ -106,13 +106,10 @@ nav {
 }
 
 .work-card {
+    cursor: pointer;
     background: var(--bg-elevated);
     border-radius: 8px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.work-link {
-    display: block;
 }
 
 .work-thumb {
@@ -151,6 +148,131 @@ nav {
 
 .work-card:hover img {
     transform: scale(1.05);
+}
+
+/* ===详情卡片=== */
+.work-modal {
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    max-width: 900px;
+    width: calc(100% - 2rem);
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.work-modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-images {
+    position: relative;
+}
+
+.modal-image-wrapper {
+    display: grid;
+}
+
+.modal-image-wrapper img {
+    grid-area: 1 / 1;        /* 所有图叠在同一格 */
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    opacity: 0;              /* 默认透明 */
+    transition: opacity 0.3s ease;
+}
+
+.modal-image-wrapper img.active {
+    opacity: 1;              /* 当前这张显示 */
+}
+
+.modal-prev,
+.modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-prev { left: 1rem; }
+.modal-next { right: 1rem; }
+
+.modal-prev:hover,
+.modal-next:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* 只有一张图时，隐藏箭头 */
+.modal-images.single-image .modal-prev,
+.modal-images.single-image .modal-next {
+    display: none;
+}
+
+.modal-meta {
+    padding: 1.5rem;
+}
+
+.modal-title {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.modal-dynasty {
+    display: inline-block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.modal-credits {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    line-height: 1.7;
+}
+
+.modal-note {
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.7;
+    margin-top: 1rem;
 }
 
 /* ===页脚=== */
