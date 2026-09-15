@@ -1,5 +1,40 @@
 [
   {
+    "id": "foguangsi-ddd",
+    "title": "佛光寺东大殿",
+    "dynasty": "唐",
+    "cover": "assets/images/foguang-temple-eastern-hall.png",
+    "link": "assets/portfolios/foguang-temple-eastern-hall.html"
+  },
+  {
+    "id": "jinci-smd",
+    "title": "晋祠圣母殿",
+    "dynasty": "宋",
+    "cover": "assets/images/jinci-smd.png",
+    "link": "assets/portfolios/jinci-smd.html"
+  },
+  {
+    "id": "foguang-temple-eastern-hall",
+    "title": "佛光寺东大殿",
+    "dynasty": "唐",
+    "cover": "assets/images/foguang-temple-eastern-hall.png",
+    "link": "assets/portfolios/foguang-temple-eastern-hall.html"
+  },
+  {
+    "id": "foguang-temple-eastern-hall",
+    "title": "佛光寺东大殿",
+    "dynasty": "唐",
+    "cover": "assets/images/foguang-temple-eastern-hall.png",
+    "link": "assets/portfolios/foguang-temple-eastern-hall.html"
+  },
+  {
+    "id": "foguang-temple-eastern-hall",
+    "title": "佛光寺东大殿",
+    "dynasty": "唐",
+    "cover": "assets/images/foguang-temple-eastern-hall.png",
+    "link": "assets/portfolios/foguang-temple-eastern-hall.html"
+  },
+  {
     "id": "foguang-temple-eastern-hall",
     "title": "佛光寺东大殿",
     "dynasty": "唐",
