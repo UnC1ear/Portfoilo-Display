@@ -1,4 +1,4 @@
-fetch("assets/data/selected-works.json")
+fetch("http://127.0.0.1:8000/api/works/")
     .then(res => res.json())
     .then(data => {
         const dynasties = [...new Set(data.map(work => work.dynasty))];
@@ -50,8 +50,8 @@ fetch("assets/data/selected-works.json")
             // 生成所有图片，第一张加上 active
             const wrapper = dialog.querySelector(".modal-image-wrapper");
             wrapper.innerHTML = work.images
-                .map((src, i) => 
-                    `<img src="${src}" alt="${work.title}" class="${i === 0 ? 'active' : ''}">`
+                .map((img, i) => 
+                    `<img src="${img.image}" alt="${work.title}" class="${i === 0 ? 'active' : ''}">`
                 )
                 .join("");
 
@@ -94,7 +94,7 @@ fetch("assets/data/selected-works.json")
             const card = e.target.closest(".work-card");
             if (!card) return;
 
-            const work = data.find(w => w.id === card.dataset.id);
+            const work = data.find(w => String(w.id) === card.dataset.id);
             if (work) openModal(work);
         });
 

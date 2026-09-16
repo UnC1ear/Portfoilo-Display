@@ -1,4 +1,4 @@
-fetch("assets/data/selected-works.json")
+fetch("http://127.0.0.1:8000/api/works/")
     .then(res => res.json())
     .then(data => {
         const list = document.querySelector(".selected-works");
